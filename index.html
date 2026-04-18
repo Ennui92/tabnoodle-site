@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tabula Noodle — Close the noise. Keep the signal.</title>
+<meta name="description" content="Smart tab cleanup for Chrome. Scores every tab, groups the keepers, and lets you swipe the rest away. No accounts. Private by default.">
+<meta property="og:title" content="Tabula Noodle — One-click tab cleanup">
+<meta property="og:description" content="You have 47 tabs. 12 matter. Tabula Noodle knows which.">
+<meta property="og:image" content="assets/promo-marquee-1400x560.png">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ================================================================
+     NAV
+     ================================================================ -->
+<nav class="nav" id="nav">
+  <a href="#top" class="wordmark">
+    <span class="tabula">Tabula</span>
+    <span class="dot"></span>
+    <span class="noodle">Noodle</span>
+  </a>
+  <div class="nav-links">
+    <a href="#how">How it works</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#install" class="btn btn-primary">Install</a>
+  </div>
+</nav>
+
+<!-- ================================================================
+     HERO
+     ================================================================ -->
+<section class="hero" id="top">
+  <div class="grid-bg"></div>
+  <div class="glow teal"></div>
+  <div class="glow plum"></div>
+
+  <div class="hero-inner">
+    <div>
+      <div class="hero-kicker">
+        <span class="pulse"></span>
+        <span>Chrome Extension · v1.0</span>
+      </div>
+      <h1>
+        Close <em>the&nbsp;noise.</em><br>
+        Keep <span class="soft">the&nbsp;signal.</span>
+      </h1>
+      <p class="lead">
+        Tabula Noodle scores every open tab, then tells you exactly what to keep, archive, and close. No login. No cloud. Just a clean browser.
+      </p>
+      <div class="hero-ctas">
+        <a href="#install" class="btn btn-primary">
+          Add to Chrome
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="#how" class="btn btn-ghost">See how it works</a>
+      </div>
+      <div class="hero-meta">
+        <div class="item">
+          <span class="label">Price</span>
+          <span class="val">Free</span>
+        </div>
+        <div class="item">
+          <span class="label">Tracking</span>
+          <span class="val">None</span>
+        </div>
+        <div class="item">
+          <span class="label">Data sent</span>
+          <span class="val">0 bytes</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-stage" aria-hidden="true">
+      <div class="hero-tab keep">
+        <div class="ico">N</div>
+        <div class="body">
+          <div class="title">91 — Research backlog</div>
+          <div class="url">notion.so/feepo/91</div>
+        </div>
+        <div class="badge">Keep</div>
+      </div>
+      <div class="hero-tab review">
+        <div class="ico">G</div>
+        <div class="body">
+          <div class="title">Inbox (3,806) — zach.ermis@gmail.com</div>
+          <div class="url">mail.google.com/mail/u/0</div>
+        </div>
+        <div class="badge">Review</div>
+      </div>
+      <div class="hero-tab close">
+        <div class="ico">▶</div>
+        <div class="body">
+          <div class="title">Who's Watching? · HBO Max</div>
+          <div class="url">play.hbomax.com/profile-picker</div>
+        </div>
+        <div class="badge">Close</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     PROBLEM
+     ================================================================ -->
+<section class="problem">
+  <div class="problem-inner">
+    <div class="section-head">
+      <span class="step-n">01</span>
+      <span class="kicker">The Problem</span>
+      <span class="rule"></span>
+    </div>
+    <h2>
+      <span class="strike">47 tabs.</span> One <em>tiny</em> browser.
+    </h2>
+
+    <div class="tabbar-demo" aria-hidden="true">
+      <div class="demo-tab">gmail<span class="x">×</span></div>
+      <div class="demo-tab">docs.google<span class="x">×</span></div>
+      <div class="demo-tab">notion<span class="x">×</span></div>
+      <div class="demo-tab">github<span class="x">×</span></div>
+      <div class="demo-tab">stackoverflow<span class="x">×</span></div>
+      <div class="demo-tab">youtube<span class="x">×</span></div>
+      <div class="demo-tab">reddit<span class="x">×</span></div>
+      <div class="demo-tab">amazon<span class="x">×</span></div>
+      <div class="demo-tab">twitter<span class="x">×</span></div>
+      <div class="demo-tab">linkedin<span class="x">×</span></div>
+      <div class="demo-tab">spotify<span class="x">×</span></div>
+      <div class="demo-tab">hbomax<span class="x">×</span></div>
+      <div class="demo-tab">booking<span class="x">×</span></div>
+      <div class="demo-tab">wikipedia<span class="x">×</span></div>
+      <div class="demo-tab">arxiv<span class="x">×</span></div>
+      <div class="demo-tab">figma<span class="x">×</span></div>
+      <div class="demo-tab">slack<span class="x">×</span></div>
+      <div class="demo-tab">claude<span class="x">×</span></div>
+      <div class="demo-tab">supabase<span class="x">×</span></div>
+      <div class="demo-tab">airbnb<span class="x">×</span></div>
+    </div>
+
+    <div class="problem-stats">
+      <div class="problem-stat">
+        <div class="big">~<em>40%</em></div>
+        <p>of tabs people keep open are forgotten within 10 minutes of opening them.</p>
+      </div>
+      <div class="problem-stat">
+        <div class="big">50MB</div>
+        <p>average RAM usage per open Chrome tab. Your laptop has thoughts about this.</p>
+      </div>
+      <div class="problem-stat">
+        <div class="big">0</div>
+        <p>tools built to help you decide. Until now.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     FEAT 1 — ONE-CLICK (how it works)
+     ================================================================ -->
+<section class="feat" id="how">
+  <div class="feat-inner">
+    <div class="feat-copy">
+      <div class="section-head">
+        <span class="step-n">02</span>
+        <span class="kicker">One-Click Cleanup</span>
+        <span class="rule"></span>
+      </div>
+      <h2>Sorted <em>in one<br>click.</em></h2>
+      <p class="lead">
+        Open the popup. Tabula Noodle reads every tab across every window, scores them, and shows you the verdict. Confirm, and it's done.
+      </p>
+      <ul class="feat-list">
+        <li>Every tab gets a keep / archive / close recommendation</li>
+        <li>Full undo — nothing is ever gone for good</li>
+        <li>Media auto-pauses when the popup opens (your music survives)</li>
+        <li>Consolidates windows across your Chrome profile</li>
+      </ul>
+    </div>
+
+    <div class="feat-visual">
+      <div class="glow-seeker"><div class="glow teal"></div></div>
+      <div class="device popup teal-glow">
+        <img src="assets/ui-popup.png" alt="Tabula Noodle popup showing 20 tabs across 4 windows, with 15 to keep and 5 to close">
+        <div class="callout teal" style="top: 60px; right: -48px;">Keep &nbsp;·&nbsp; 15</div>
+        <div class="callout ember" style="bottom: 140px; left: -60px;">Close &nbsp;·&nbsp; 5</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     FEAT 2 — SWIPE
+     ================================================================ -->
+<section class="feat reverse">
+  <div class="feat-inner">
+    <div class="feat-copy">
+      <div class="section-head">
+        <span class="step-n">03</span>
+        <span class="kicker">Swipe Mode</span>
+        <span class="rule"></span>
+      </div>
+      <h2>Tinder <span class="plum">for&nbsp;tabs.</span></h2>
+      <p class="lead">
+        Decisions are hard. Tabula Noodle makes them one at a time. Left arrow to close, right arrow to keep. You'll cruise through 50 tabs in under a minute.
+      </p>
+      <ul class="feat-list">
+        <li class="plum">Keyboard-first — ← and → do everything</li>
+        <li class="plum">See the favicon, title, and category before you decide</li>
+        <li class="plum">Undo the last close at any point</li>
+        <li class="plum">Works great at 11pm when your tab count finally snaps you</li>
+      </ul>
+    </div>
+
+    <div class="feat-visual">
+      <div class="glow-seeker"><div class="glow plum"></div></div>
+      <div class="device swipe plum-glow">
+        <img src="assets/ui-swipe.png" alt="Tabula Noodle swipe mode showing a media tab for play.hbomax.com with close and keep buttons">
+        <div class="callout ember" style="top: 50%; left: -70px; transform: translateY(-50%);">← Close</div>
+        <div class="callout teal" style="top: 50%; right: -70px; transform: translateY(-50%);">Keep →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     FEAT 3 — GROUPS
+     ================================================================ -->
+<section class="feat">
+  <div class="feat-inner">
+    <div class="feat-copy">
+      <div class="section-head">
+        <span class="step-n">04</span>
+        <span class="kicker">Auto-Grouping</span>
+        <span class="rule"></span>
+      </div>
+      <h2>Every tab,<br><em>auto-grouped.</em></h2>
+      <p class="lead">
+        Tabula Noodle reads your tabs and files them by category — Docs, Articles, Media, Tools, Searches. Your tab bar finally makes sense.
+      </p>
+      <ul class="feat-list">
+        <li>Review mode lets you see every decision before confirming</li>
+        <li>Bulk actions per category — close all Media with one click</li>
+        <li>Per-tab rescue — keep that one important thing from the pile</li>
+        <li>Respects pinned, audible, and active tabs automatically</li>
+      </ul>
+    </div>
+
+    <div class="feat-visual">
+      <div class="glow-seeker"><div class="glow teal"></div></div>
+      <div class="device review teal-glow">
+        <img src="assets/ui-review.png" alt="Tabula Noodle review panel showing tabs grouped into Email, AI, Dev, and Docs categories">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CONTROL
+     ================================================================ -->
+<section class="control">
+  <div class="control-inner">
+    <div class="section-head" style="justify-content: center;">
+      <span class="step-n">05</span>
+      <span class="kicker">Aggressiveness</span>
+    </div>
+    <h2><em class="gentle">Gentle</em> <span class="or">or</span> <em class="ruthless">ruthless.</em></h2>
+    <p class="lead">
+      You set the dial. Tabula Noodle closes as much — or as little — as you're comfortable with. No nagging, no defaults-that-aren't-really-defaults.
+    </p>
+
+    <div class="slider-wrap">
+      <div class="slider-labels">
+        <span class="l">Gentle</span>
+        <span class="m">Balanced</span>
+        <span class="r">Ruthless</span>
+      </div>
+      <div class="slider-track">
+        <div class="handle"></div>
+      </div>
+    </div>
+
+    <div class="modes">
+      <div class="mode gentle">
+        <div class="m-label">01 — Gentle</div>
+        <div class="m-title">Only the obvious.</div>
+        <div class="m-body">Closes duplicate tabs and long-forgotten searches. Keeps anything you've touched in the last hour.</div>
+        <div class="m-stat"><b>~20%</b> of tabs closed</div>
+      </div>
+      <div class="mode balanced">
+        <div class="m-label">02 — Balanced</div>
+        <div class="m-title">Sensible sweep.</div>
+        <div class="m-body">Clears media, profile pickers, and low-engagement tabs. Keeps your Docs, Tools, and active research.</div>
+        <div class="m-stat"><b>~50%</b> of tabs closed</div>
+      </div>
+      <div class="mode ruthless">
+        <div class="m-label">03 — Ruthless</div>
+        <div class="m-title">Inbox zero vibes.</div>
+        <div class="m-body">If it's not pinned, playing audio, or the active tab, it's gone. For when you really need to start fresh.</div>
+        <div class="m-stat"><b>~80%</b> of tabs closed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     PRIVACY
+     ================================================================ -->
+<section class="privacy" id="privacy">
+  <div class="grid-bg"></div>
+  <div class="glow teal"></div>
+
+  <div class="privacy-inner">
+    <div class="kicker-line">The Whole Privacy Policy</div>
+    <h2>
+      <span class="nothing">Nothing</span> leaves<br>
+      your <span class="browser">browser.</span>
+    </h2>
+    <p class="lead">
+      No accounts. No servers. No tracking. Tabula Noodle runs entirely on your machine — the way a browser extension should.
+    </p>
+
+    <div class="privacy-facts">
+      <div class="pfact">
+        <div class="check">No server</div>
+        <h4>Runs 100% locally</h4>
+        <p>All scoring happens in your browser. There is no backend to hack.</p>
+      </div>
+      <div class="pfact">
+        <div class="check">No account</div>
+        <h4>Zero sign-up</h4>
+        <p>Install, open, clean. We never ask who you are.</p>
+      </div>
+      <div class="pfact">
+        <div class="check">No tracking</div>
+        <h4>No analytics, no ads</h4>
+        <p>Your tab titles and URLs are yours. We never see them.</p>
+      </div>
+      <div class="pfact">
+        <div class="check">Open data</div>
+        <h4>Full undo, always</h4>
+        <p>Every cleanup is reversible. Nothing is deleted you can't bring back.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     ROADMAP
+     ================================================================ -->
+<section class="roadmap" id="roadmap">
+  <div class="roadmap-inner">
+    <div class="roadmap-head">
+      <div>
+        <div class="section-head">
+          <span class="step-n">06</span>
+          <span class="kicker">What's Next</span>
+        </div>
+        <h2>A <em>pro tier</em><br>for power sweepers.</h2>
+      </div>
+      <p class="sub">
+        The free tier stays free, forever. Pro adds AI smarts, automation, and a searchable archive — for folks who live in their browser. $2.99/mo, 7-day trial, no credit card to start.
+      </p>
+    </div>
+
+    <div class="roadmap-grid">
+      <div class="rm-card">
+        <div class="rm-tag">Pro</div>
+        <div class="rm-num">01</div>
+        <h3>AI classification</h3>
+        <p>Smarter grouping powered by Claude Haiku. "Japan trip research", "React debugging session" — labels that actually make sense.</p>
+      </div>
+      <div class="rm-card">
+        <div class="rm-tag">Pro</div>
+        <div class="rm-num">02</div>
+        <h3>Scheduled cleanups</h3>
+        <p>Daily, every three days, weekly. Pick your rhythm. Notification with one-click undo after every run.</p>
+      </div>
+      <div class="rm-card">
+        <div class="rm-tag">Pro</div>
+        <div class="rm-num">03</div>
+        <h3>Archive browser</h3>
+        <p>Every tab you've ever closed, searchable and grouped by session. Reopen any of them with a click.</p>
+      </div>
+      <div class="rm-card">
+        <div class="rm-tag">Pro</div>
+        <div class="rm-num">04</div>
+        <h3>Stats dashboard</h3>
+        <p>Weekly charts, category breakdowns, and the occasional humble brag ("you've saved 14 hours of decision-making").</p>
+      </div>
+      <div class="rm-card">
+        <div class="rm-tag">Pro</div>
+        <div class="rm-num">05</div>
+        <h3>Custom rules</h3>
+        <p>"Never close notion.so." "Always archive YouTube tabs after an hour." Build your own logic with a simple rule builder.</p>
+      </div>
+      <div class="rm-card">
+        <div class="rm-tag">Pro</div>
+        <div class="rm-num">06</div>
+        <h3>Focus mode</h3>
+        <p>Type what you're working on. Tabula Noodle keeps only the tabs that match, and brings the rest back when you're done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     CTA
+     ================================================================ -->
+<section class="cta" id="install">
+  <div class="glow teal"></div>
+  <div class="cta-inner">
+    <h2>Clean browser<br>in <em>one click.</em></h2>
+    <p class="lead">
+      Free on the Chrome Web Store. No account, no credit card, no catch.
+    </p>
+    <div class="cta-ctas">
+      <a href="#" class="btn btn-primary">
+        Add to Chrome
+        <span aria-hidden="true">→</span>
+      </a>
+      <a href="https://github.com/feepo" class="btn btn-ghost" target="_blank" rel="noopener">
+        View on GitHub
+      </a>
+    </div>
+    <div class="cta-note">4.8★ &nbsp;·&nbsp; 10,000+ installs &nbsp;·&nbsp; Chrome Web Store featured</div>
+  </div>
+</section>
+
+<!-- ================================================================
+     FOOTER
+     ================================================================ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#top" class="wordmark">
+        <span class="tabula">Tabula</span>
+        <span class="dot"></span>
+        <span class="noodle">Noodle</span>
+      </a>
+      <p>Smart tab cleanup that respects your attention, your privacy, and your music playback.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Product</h5>
+      <ul>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#install">Install</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Support</h5>
+      <ul>
+        <li><a href="https://buymeacoffee.com" target="_blank" rel="noopener">Buy me a coffee</a></li>
+        <li><a href="#">Report a bug</a></li>
+        <li><a href="#">Request a feature</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Elsewhere</h5>
+      <ul>
+        <li><a href="https://github.com/feepo" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Yet Another Expat podcast</a></li>
+        <li><a href="#">Changelog</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="made">Made by an over-tabbed human in <em>Berlin</em>.</div>
+    <div class="made">© 2026 Tabula Noodle · All rights reserved</div>
+  </div>
+</footer>
+
+<script>
+  // Nav gets a border-bottom once you scroll past the hero
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }, { passive: true });
+</script>
+
+</body>
+</html>
