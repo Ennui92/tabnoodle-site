@@ -79,31 +79,23 @@ button { font: inherit; cursor: pointer; }
 .wordmark {
   display: inline-flex;
   align-items: baseline;
-  gap: 0.15em;
+  gap: 0.05em;
   line-height: 1;
-  letter-spacing: -0.01em;
-}
-.wordmark .tabula {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 400;
-  color: var(--teal-bright);
-}
-.wordmark .noodle {
   font-family: var(--font-sans);
-  font-weight: 600;
-  letter-spacing: -0.035em;
-  color: var(--bone);
+  font-weight: 700;
+  color: var(--teal-bright);
+  letter-spacing: -0.03em;
+  text-shadow: 0 0 24px rgba(94, 234, 212, 0.15);
 }
 .wordmark .dot {
   display: inline-block;
-  width: 0.22em;
-  height: 0.22em;
+  width: 0.2em;
+  height: 0.2em;
   border-radius: 999px;
-  background: var(--teal-bright);
-  transform: translateY(-0.08em);
-  margin: 0 0.14em;
-  box-shadow: 0 0 0.8em var(--teal-glow);
+  background: var(--plum);
+  transform: translateY(-0.06em);
+  margin-left: 0.02em;
+  box-shadow: 0 0 0.6em rgba(192, 132, 252, 0.5);
 }
 
 .grid-bg {
@@ -408,10 +400,12 @@ button { font: inherit; cursor: pointer; }
   line-height: 1.05;
   letter-spacing: -0.02em;
   margin: 24px 0 40px;
+  font-weight: 400;
+  color: var(--bone);
 }
 .demo-h2 em {
   font-style: italic;
-  color: var(--teal, #5eead4);
+  color: var(--teal-bright);
 }
 .demo-frame {
   position: relative;
@@ -423,7 +417,7 @@ button { font: inherit; cursor: pointer; }
   box-shadow:
     0 0 0 1px var(--line-soft),
     0 30px 80px -20px rgba(0,0,0,0.7),
-    0 0 120px -20px rgba(94, 234, 212, 0.15);
+    0 0 120px -20px var(--teal-glow);
 }
 .demo-frame iframe {
   position: absolute;
