@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TabNoodle — Privacy Policy</title>
+<meta name="description" content="TabNoodle's privacy policy. TabNoodle runs entirely on your device — no servers, no accounts, no tracking.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .legal { max-width: 760px; margin: 0 auto; padding: 160px 24px 100px; }
+  .legal h1 { font-family: var(--font-display); font-size: 64px; line-height: 0.95; margin: 0 0 8px; font-weight: 400; }
+  .legal h1 em { font-style: italic; color: var(--teal-bright); }
+  .legal .updated { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--fog); margin-bottom: 48px; }
+  .legal h2 { font-family: var(--font-display); font-style: italic; font-size: 32px; margin: 48px 0 16px; font-weight: 400; color: var(--bone); }
+  .legal p, .legal li { font-size: 16px; line-height: 1.6; color: var(--bone-dim); }
+  .legal ul { padding-left: 20px; }
+  .legal li { margin-bottom: 8px; }
+  .legal code { font-family: var(--font-mono); font-size: 14px; background: var(--ink-3); padding: 2px 6px; border-radius: 4px; color: var(--teal-bright); }
+  .legal a { color: var(--teal-bright); text-decoration: underline; text-decoration-color: rgba(94,234,212,0.3); text-underline-offset: 3px; }
+  .legal a:hover { text-decoration-color: var(--teal-bright); }
+  .legal .tldr { padding: 24px; border: 1px solid rgba(45,212,191,0.3); border-radius: 12px; background: rgba(45,212,191,0.05); margin: 32px 0; }
+  .legal .tldr p { margin: 0; color: var(--bone); }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="/tabnoodle-site/" class="wordmark">TabNoodle<span class="dot"></span></a>
+  <div class="nav-links">
+    <a href="/tabnoodle-site/#how">How it works</a>
+    <a href="/tabnoodle-site/#install" class="btn btn-primary">Install</a>
+  </div>
+</nav>
+
+<div class="legal">
+  <h1>Privacy <em>policy.</em></h1>
+  <div class="updated">Last updated · April 20, 2026</div>
+
+  <div class="tldr">
+    <p><strong>TL;DR —</strong> TabNoodle runs entirely on your device. It does not collect, transmit, store remotely, or share any personal data with anyone, including the developer. There are no servers, no accounts, no analytics, and no tracking.</p>
+  </div>
+
+  <h2>What TabNoodle reads</h2>
+  <p>To score, group, and clean tabs, TabNoodle reads the following information about your open tabs via the Chrome browser APIs:</p>
+  <ul>
+    <li>Tab title</li>
+    <li>Tab URL</li>
+    <li>Favicon URL</li>
+    <li>Whether the tab is pinned</li>
+    <li>Whether the tab is playing audio</li>
+    <li>When the tab was last focused</li>
+    <li>Which window the tab belongs to</li>
+  </ul>
+  <p>This information is read only while the extension is active and only for making cleanup decisions based on your chosen settings. It is never transmitted off your device.</p>
+
+  <h2>What TabNoodle stores locally</h2>
+  <p>TabNoodle stores the following information on your device using Chrome's <code>chrome.storage.local</code> API:</p>
+  <ul>
+    <li>Your aggressiveness preference (Gentle through Ruthless)</li>
+    <li>Your theme preference (dark or light) and merge-windows setting</li>
+    <li>Cumulative stats — number of tabs cleaned, number of sessions, first-use date</li>
+    <li>UI state — which panels are expanded, last-used mode</li>
+    <li>The most recent cleanup session, used only for in-extension undo</li>
+  </ul>
+  <p>This data never leaves your device. Uninstalling the extension removes all of it.</p>
+
+  <h2>What TabNoodle does not do</h2>
+  <ul>
+    <li>Does not transmit any data to any server — there are no servers</li>
+    <li>Does not use analytics, telemetry, or tracking of any kind</li>
+    <li>Does not require an account or sign-in</li>
+    <li>Does not sell or share your data with third parties</li>
+    <li>Does not use your data for advertising</li>
+    <li>Does not use your data to determine creditworthiness or for lending</li>
+    <li>Does not display ads</li>
+  </ul>
+
+  <h2>Permissions we request, and why</h2>
+  <ul>
+    <li><code>tabs</code> — to read tab metadata (title, URL, audible state, last focus) so we can score, group, and close tabs</li>
+    <li><code>windows</code> — to enumerate your browser windows and optionally consolidate tabs into a single window</li>
+    <li><code>storage</code> — to save your preferences and cleanup stats on your device</li>
+    <li><code>sessions</code> — to support the "restore recently closed tabs" fallback in the undo feature</li>
+    <li><code>tabGroups</code> — to implement auto-grouping into Chrome's native tab groups</li>
+    <li><code>scripting</code> — to pause audio on the active tab when you open the popup, so the popup doesn't fight for audio focus</li>
+    <li>Host permissions (<code>&lt;all_urls&gt;</code>) — required by <code>scripting</code> so the pause-media script can run on whichever website you happen to be listening on (YouTube, Spotify, a podcast site, etc.). No network requests are made from these permissions; they are used only to run the local pause-media snippet in the active tab.</li>
+  </ul>
+
+  <h2>Third-party donation links</h2>
+  <p>The extension's About panel and this website include optional links to a <a href="https://paypal.me/hdfp" target="_blank" rel="noopener">PayPal donation page</a>. Clicking these opens PayPal's website in a new tab; if you choose to donate there, PayPal's own privacy policy applies to that interaction. No data about your browsing or tab usage is ever sent to PayPal or anyone else.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If the privacy practices ever change — for example, if a future optional feature transmits data (such as the AI classification feature planned for a future Pro tier) — this page will be updated and the change noted here. Any feature that involves data transmission will be strictly opt-in.</p>
+
+  <h2>Contact</h2>
+  <p>If you have questions about this policy or the extension, reach out via the contact link in the extension's About panel, or email <a href="mailto:zach.ermis@gmail.com">zach.ermis@gmail.com</a>.</p>
+</div>
+
+</body>
+</html>
