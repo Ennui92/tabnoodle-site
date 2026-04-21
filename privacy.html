@@ -79,12 +79,12 @@
   <h2>Permissions we request, and why</h2>
   <ul>
     <li><code>tabs</code> — to read tab metadata (title, URL, audible state, last focus) so we can score, group, and close tabs</li>
+    <li><code>activeTab</code> — grants temporary access to the tab that was active when you clicked the extension icon. This is what allows the pause-media snippet to run on whatever site you happen to be listening on (YouTube, Spotify, a podcast site, etc.) without requiring broad host permissions</li>
     <li><code>windows</code> — to enumerate your browser windows and optionally consolidate tabs into a single window</li>
     <li><code>storage</code> — to save your preferences and cleanup stats on your device</li>
     <li><code>sessions</code> — to support the "restore recently closed tabs" fallback in the undo feature</li>
     <li><code>tabGroups</code> — to implement auto-grouping into Chrome's native tab groups</li>
-    <li><code>scripting</code> — to pause audio on the active tab when you open the popup, so the popup doesn't fight for audio focus</li>
-    <li>Host permissions (<code>&lt;all_urls&gt;</code>) — required by <code>scripting</code> so the pause-media script can run on whichever website you happen to be listening on (YouTube, Spotify, a podcast site, etc.). No network requests are made from these permissions; they are used only to run the local pause-media snippet in the active tab.</li>
+    <li><code>scripting</code> — paired with <code>activeTab</code>, this lets TabNoodle inject a tiny local pause-media snippet into the active tab when you open the popup. No network requests are made; the snippet only calls <code>pause()</code> on any playing <code>&lt;video&gt;</code> or <code>&lt;audio&gt;</code> elements on that one tab.</li>
   </ul>
 
   <h2>Third-party donation links</h2>
