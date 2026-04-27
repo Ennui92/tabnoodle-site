@@ -1120,3 +1120,44 @@ footer {
   .nav-links { gap: 16px; }
   .nav-links a:not(.btn) { display: none; }
 }
+
+/* ================================================================
+   MORE PROJECTS BANNER (between content and footer)
+   ================================================================ */
+.more-projects {
+  padding: 28px 24px;
+  background: var(--ink-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+
+.more-projects p {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--bone-dim);
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+}
+
+.more-projects a {
+  color: var(--teal-bright);
+  text-decoration: underline;
+  text-decoration-color: rgba(94, 234, 212, 0.3);
+  text-underline-offset: 3px;
+}
+
+.more-projects a:hover {
+  text-decoration-color: var(--teal-bright);
+}
+
+.more-projects strong {
+  font-weight: 600;
+  color: var(--teal-bright);
+}
+
+.more-projects .dot {
+  color: var(--fog-2);
+  margin: 0 10px;
+}
